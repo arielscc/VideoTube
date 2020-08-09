@@ -26,6 +26,11 @@ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-l
 ```bash
 npm install webpack webpack-cli html-webpack-plugin html-loader  --save-dev
 ```
+* Install Tailwind
+
+```bash
+npm install tailwindcss postcss-cli postcss-loader autoprefixer --save-dev
+```
 
 ## Estructure
 
