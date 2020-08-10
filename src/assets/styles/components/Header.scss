@@ -1,0 +1,37 @@
+.header {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 10rem;
+}
+.header img {
+  margin: 5px;
+  width: 200px;
+}
+.header__menu {
+  text-align: right;
+  margin-top: 20px;
+}
+.header__menu--perfil {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.header__menu ul {
+  display: none;
+}
+.header__menu:hover ul {
+  display: block;
+}
+.header__menu li {
+  margin: 10px 0;
+  list-style: none;
+}
+.header__menu li a {
+  color: #fff;
+  margin: 10px 0;
+  text-decoration: none;
+}
+.header__menu li a:hover {
+  text-decoration: underline;
+}

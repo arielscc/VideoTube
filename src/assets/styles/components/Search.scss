@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  margin: 1.5rem;
+}
+
+.main__title {
+  margin: 2rem 0;
+}
+
+.main__input {
+  width: 70%;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 1em;
+  padding: 0 30px;
+  background-color: #ab88ff;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.main__input::placeholder {
+  color: #fff;
+}
