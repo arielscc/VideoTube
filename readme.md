@@ -13,7 +13,7 @@ Then we can install a dependencies for this project:
 - Install React:
 
 ```bash
-npm i react react-dom
+npm i react react-dom prop-types
 ```
 
 - Install Babel:

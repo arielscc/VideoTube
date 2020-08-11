@@ -24,6 +24,9 @@
 }
 
 .carousel-item__img {
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .carousel-item__details {

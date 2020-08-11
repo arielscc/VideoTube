@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './components/Header';
 import Search from './components/Search';
@@ -8,48 +8,40 @@ import CarouselItem from './components/CarouselItem';
 import Footer from './components/Footer';
 
 import './assets/styles/App.scss';
+import useInitialState from './hooks/useInitialState';
+
+const URL = 'http://localhost:3000/initialState';
 
 export const App = () => {
+  const initialState = useInitialState(URL);
+  const { mylist, originals, trends } = initialState;
+
   return (
     <>
       <Header />
       <Search />
-      <Category title={'Mi Lista'}>
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Category>
-
+      {mylist.length > 0 && (
+        <Category title={'Mi Lista'}>
+          <Carousel>
+            {mylist.map((item) => {
+              return <CarouselItem key={item.id} {...item} />;
+            })}
+          </Carousel>
+        </Category>
+      )}
       <Category title={'Tendencias'}>
         <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
+          {trends.map((item) => {
+            return <CarouselItem key={item.id} {...item} />;
+          })}
         </Carousel>
       </Category>
 
-      <Category title={'Guardados'}>
+      <Category title={'Originales'}>
         <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
+          {originals.map((item) => {
+            return <CarouselItem key={item.id} {...item} />;
+          })}
         </Carousel>
       </Category>
       <Footer />
