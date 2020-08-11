@@ -40,6 +40,22 @@ npm install --save-dev mini-css-extract-plugin css-loader node-sass sass-loader
 npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
+-Install Json-server
+
+```bash
+npm install -g json-server
+```
+
+use: `json-server [fileName].json`
+
+Install npm-gui: Use for view a npm packages
+
+```bash
+npm install -g npm-gui
+```
+
+use: `npm-gui localhost:9000`
+
 ## Estructure
 
 We need to have the next structure for the project:
