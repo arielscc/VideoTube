@@ -2,7 +2,7 @@
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
-  min-height: 10rem;
+  min-height: 11rem;
 }
 .header img {
   margin: 5px;
@@ -34,4 +34,8 @@
 }
 .header__menu li a:hover {
   text-decoration: underline;
+}
+.header__user-logo {
+  max-width: 2rem;
+  vertical-align: middle;
 }

@@ -25,7 +25,7 @@ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-l
 - Install Webpack
 
 ```bash
-npm install webpack webpack-cli html-webpack-plugin html-loader webpack-dev-server --save-dev
+npm install webpack webpack-cli html-webpack-plugin html-loader webpack-dev-server file-loader --save-dev
 ```
 
 - Install Styles with SASS

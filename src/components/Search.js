@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../assets/styles/components/Search.scss';
+
 export default function Search() {
   return (
     <section className="main">

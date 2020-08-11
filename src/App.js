@@ -14,8 +14,38 @@ export const App = () => {
     <>
       <Header />
       <Search />
-      <Category>
+      <Category title={'Mi Lista'}>
         <Carousel>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+        </Carousel>
+      </Category>
+
+      <Category title={'Tendencias'}>
+        <Carousel>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+        </Carousel>
+      </Category>
+
+      <Category title={'Guardados'}>
+        <Carousel>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
           <CarouselItem />
           <CarouselItem />
           <CarouselItem />

@@ -20,6 +20,9 @@
   color: #fff;
   border: 2px solid #fff;
 }
+.main__input:focus {
+  outline: none;
+}
 .main__input::placeholder {
   color: #fff;
 }
