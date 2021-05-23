@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --host 192.168.0.9",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "dev": "concurrently --kill-others \"webpack-dev-server --open --mode development\" \"json-server --watch initialState.json --port 3000\""
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "concurrently": "^6.1.0",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",

@@ -12,7 +12,6 @@ const useInitialState = (URL) => {
       .then((response) => response.json())
       .then((data) => setVideo(data));
   }, []);
-  console.log(video);
   return video;
 };
 
