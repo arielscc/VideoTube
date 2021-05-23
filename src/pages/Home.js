@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-import Header from './components/Header';
-import Search from './components/Search';
-import Category from './components/Category';
-import Carousel from './components/Carousel';
-import CarouselItem from './components/CarouselItem';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Search from '../components/Search';
+import Category from '../components/Category';
+import Carousel from '../components/Carousel';
+import CarouselItem from '../components/CarouselItem';
+import Footer from '../components/Footer';
 
-import './assets/styles/App.scss';
-import useInitialState from './hooks/useInitialState';
+import '../assets/styles/App.scss';
+import useInitialState from '../hooks/useInitialState';
 
 const URL = 'http://localhost:3000/initialState';
 
-export const App = () => {
+export const Home = () => {
   const initialState = useInitialState(URL);
   const { mylist, originals, trends } = initialState;
 
