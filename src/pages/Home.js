@@ -6,21 +6,24 @@ import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 
 import '../assets/styles/App.scss';
-import useInitialState from '../hooks/useInitialState';
+// import useInitialState from '../hooks/useInitialState';
 
-const URL = 'http://localhost:3000/initialState';
+//redux
+import { connect } from 'react-redux';
 
-export const Home = () => {
-  const initialState = useInitialState(URL);
-  const { mylist, originals, trends } = initialState;
+// const URL = 'http://localhost:3000/initialState';
+
+const Home = ({ myList, trends, originals }) => {
+  // const initialState = useInitialState(URL);
+  // const { mylist, originals, trends } = initialState;
 
   return (
     <>
       <Search />
-      {mylist.length > 0 && (
+      {myList.length > 0 && (
         <Category title={'Mi Lista'}>
           <Carousel>
-            {mylist.map((item) => {
+            {myList.map((item) => {
               return <CarouselItem key={item.id} {...item} />;
             })}
           </Carousel>
@@ -44,3 +47,10 @@ export const Home = () => {
     </>
   );
 };
+const mapStateToProps = (state) => ({
+  myList: state.myList,
+  trends: state.trends,
+  originals: state.originals,
+});
+
+export default connect(mapStateToProps, null)(Home);
