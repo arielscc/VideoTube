@@ -16,7 +16,6 @@ import { connect } from 'react-redux';
 const Home = ({ myList, trends, originals }) => {
   // const initialState = useInitialState(URL);
   // const { mylist, originals, trends } = initialState;
-
   return (
     <>
       <Search />
