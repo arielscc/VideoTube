@@ -39,6 +39,13 @@
   max-width: 2rem;
   vertical-align: middle;
 }
+.header__menu--perfil img {
+  margin-right: 8px;
+  width: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
 .greenHeader {
   background-color: #21c08b;
 }

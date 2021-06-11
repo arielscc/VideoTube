@@ -1,12 +1,13 @@
 import React from 'react';
 
-import '../assets/styles/components/Header.scss';
 import logo from '../assets/img/logo-platzi-video.png';
 import logUser from '../assets/img/user-icon.png';
 import { Link, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { gravatar } from '../utils/gravatar';
 import { logoutRequest } from '../actions';
+
+import '../assets/styles/components/Header.scss';
 
 const Header = ({ user, logoutRequest }) => {
   const hasUser = Object.keys(user).length > 0;
