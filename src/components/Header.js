@@ -3,19 +3,25 @@ import React from 'react';
 import '../assets/styles/components/Header.scss';
 import logo from '../assets/img/logo-platzi-video.png';
 import logUser from '../assets/img/user-icon.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { gravatar } from '../utils/gravatar';
 import { logoutRequest } from '../actions';
 
 const Header = ({ user, logoutRequest }) => {
-  console.log(user);
   const hasUser = Object.keys(user).length > 0;
   const handleLogout = () => {
     logoutRequest({});
   };
+
+  const location = useLocation();
+  console.log(location);
+  const headerClass =
+    location.pathname === '/register' || location.pathname === '/login'
+      ? 'greenHeader'
+      : '';
   return (
-    <header className="header">
+    <header className={`header ${headerClass}`}>
       <Link to="/">
         <img src={logo} alt="Logo Platzi video" />
       </Link>
@@ -42,9 +48,9 @@ const Header = ({ user, logoutRequest }) => {
           <ul>
             <li>{user.name}</li>
             <li>
-              <Link to="/" onClick={handleLogout}>
+              <a href="/" onClick={handleLogout}>
                 Cerrar Sesión
-              </Link>
+              </a>
             </li>
           </ul>
         ) : (

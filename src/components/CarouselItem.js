@@ -10,6 +10,7 @@ import '../assets/styles/components/CarouselItem.scss';
 
 import { setFavorite } from '../actions';
 import { deleteFavorite } from '../actions';
+import { Link } from 'react-router-dom';
 
 const CarouselItem = (props) => {
   const { cover, title, year, contentRating, duration, id, isList } = props;
@@ -32,9 +33,9 @@ const CarouselItem = (props) => {
       <img className="carousel-item__img" src={cover} alt={title} />
       <div className="carousel-item__details">
         <div>
-          <button>
+          <Link to={`/player/${id}`}>
             <img className="icon-play" src={play} />
-          </button>
+          </Link>
           {!isList ? (
             <button onClick={handleSetFavorite}>
               <img className="icon-plus" src={plus} />
